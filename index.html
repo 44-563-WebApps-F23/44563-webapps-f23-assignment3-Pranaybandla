@@ -63,6 +63,15 @@
         <td>5-7 hours</td>
     </tr>
 </table>
-
+<hr>
+<h2>Code Display</h2>
+<blockquote>How to get URL of current page in PHP [duplicate]</blockquote>
+<a href="https://stackoverflow.com/questions/1283327/how-to-get-url-of-current-page-in-php">Stack overflow quick link</a>
+<pre>function getUrl() {
+    $url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
+    $url .= ( $_SERVER["SERVER_PORT"] !== 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
+    $url .= $_SERVER["REQUEST_URI"];
+    return $url;
+  }</pre>
 </body>
 </html>
